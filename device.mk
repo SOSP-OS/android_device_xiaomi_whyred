@@ -12,6 +12,9 @@ DEVICE_PATH := device/xiaomi/whyred
 # Setup dalvik vm configs
 $(call inherit-product, frameworks/native/build/phone-xhdpi-4096-dalvik-heap.mk)
 
+#Google Apps
+$(call inherit-product, vendor/gapps/common/common-vendor.mk)
+
 # Audio
 PRODUCT_COPY_FILES += \
     $(DEVICE_PATH)/audio/audio_platform_info.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_platform_info_intcodec.xml \
