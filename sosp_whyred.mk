@@ -22,36 +22,23 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/product_launched_with_o.mk)
 # Enable updating of APEXes
 #$(call inherit-product, $(SRC_TARGET_DIR)/product/updatable_apex.mk)
 
+# Inherit some common sosp stuff.
+$(call inherit-product, vendor/sosp/config/common.mk)
+
 # Inherit from whyred device
-$(call inherit-product, device/xiaomi/whyred/device.mk)
+$(call inherit-product, $(LOCAL_PATH)/device.mk)
 
-# Inherit from custom vendor
-$(call inherit-product-if-exist, vendor/MiuiCamera/config.mk)
-
-# Inherit some common Lineage stuff.
-$(call inherit-product, vendor/arrow/config/common.mk)
-
-DEVICE_MAINTAINER := Sreekanth
-PRODUCT_NAME := arrow_whyred
 PRODUCT_BRAND := Xiaomi
 PRODUCT_DEVICE := whyred
 PRODUCT_MANUFACTURER := Xiaomi
+PRODUCT_NAME := sosp_whyred
 PRODUCT_MODEL := Redmi Note 5
 
 PRODUCT_GMS_CLIENTID_BASE := android-xiaomi
 
+TARGET_VENDOR_PRODUCT_NAME := whyred
+
 PRODUCT_BUILD_PROP_OVERRIDES += \
-    TARGET_DEVICE="whyred" \
-    PRODUCT_NAME="whyred" \
     PRIVATE_BUILD_DESC="whyred-user 8.1.0 OPM1.171019.011 V9.5.11.0.OEIMIFA release-keys"
 
 BUILD_FINGERPRINT := xiaomi/whyred/whyred:8.1.0/OPM1.171019.011/V9.5.11.0.OEIMIFA:user/release-keys
-
-PRODUCT_PROPERTY_OVERRIDES += \
-    ro.build.fingerprint=xiaomi/whyred/whyred:8.1.0/OPM1.171019.011/V9.5.11.0.OEIMIFA:user/release-keys
-
-TARGET_VENDOR := Xiaomi
-IS_PHONE := true
-TARGET_BOOT_ANIMATION_RES := 1080
-TARGET_GAPPS_ARCH := arm64
-TARGET_SCREEN_DENSITY := 440

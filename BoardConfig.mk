@@ -72,7 +72,7 @@ BOARD_KERNEL_IMAGE_NAME := Image.gz-dtb
 KERNEL_LD := LD=ld.lld
 TARGET_KERNEL_ARCH := arm64
 TARGET_KERNEL_HEADER_ARCH := arm64
-TARGET_KERNEL_SOURCE := kernel/xiaomi/whyred
+TARGET_KERNEL_SOURCE := kernel/xiaomi/sdm660
 TARGET_KERNEL_CONFIG := whyred-oldcam_defconfig
 TARGET_KERNEL_CLANG_COMPILE := true
 

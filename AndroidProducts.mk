@@ -14,4 +14,9 @@
 # limitations under the License.
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/arrow_whyred.mk
+    $(LOCAL_DIR)/sosp_whyred.mk
+
+COMMON_LUNCH_CHOICES := \
+    sosp_whyred-user \
+    sosp_whyred-userdebug \
+    sosp_whyred-eng
