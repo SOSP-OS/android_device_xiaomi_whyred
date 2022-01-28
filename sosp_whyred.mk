@@ -28,6 +28,9 @@ $(call inherit-product, vendor/sosp/config/common.mk)
 # Inherit from whyred device
 $(call inherit-product, $(LOCAL_PATH)/device.mk)
 
+#Google Apps
+$(call inherit-product, vendor/gapps/common/common-vendor.mk)
+
 PRODUCT_BRAND := Xiaomi
 PRODUCT_DEVICE := whyred
 PRODUCT_MANUFACTURER := Xiaomi
