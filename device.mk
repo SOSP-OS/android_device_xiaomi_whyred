@@ -215,9 +215,6 @@ PRODUCT_PACKAGES += \
     android.hardware.drm@1.0-impl \
     android.hardware.drm@1.0-service \
     android.hardware.drm@1.3.vendor \
-    android.hardware.drm@1.2.vendor \
-    android.hardware.drm@1.1.vendor \
-    android.hardware.drm@1.0.vendor \
     android.hardware.drm@1.4-service.clearkey \
     android.hardware.drm@1.3-service.widevine
 
@@ -276,12 +273,8 @@ PRODUCT_PACKAGES += \
 
 # GNSS
 PRODUCT_PACKAGES += \
-    android.hardware.gnss@1.0.vendor \
-    android.hardware.gnss@1.1.vendor \
-    android.hardware.gnss@1.2.vendor \
-    android.hardware.gnss@2.0.vendor \
     android.hardware.gnss@2.1.vendor \
-    android.hardware.gnss@3.0.vendor \
+    android.hardware.gnss@2.1-impl-qti
 
 # Health
 PRODUCT_PACKAGES += \
@@ -498,10 +491,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     textclassifier.bundle1
 
-# Thermal
-PRODUCT_PACKAGES += \
-    android.hardware.thermal@2.0-service.qti
-
 # Touchscreen
 PRODUCT_PACKAGES += \
     libtinyxml2
@@ -522,7 +511,6 @@ EXTRA_SYSTEM_LIBRARIES_64 := \
 
 # Wifi
 PRODUCT_PACKAGES += \
-    android.hardware.wifi@1.5.vendor \
     android.hardware.wifi@1.0-service \
     hostapd \
     hostapd_cli \
